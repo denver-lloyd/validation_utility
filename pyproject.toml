@@ -1,0 +1,44 @@
+[project]
+name = "validation_utility"
+version = "0.2.0a0"
+description = "Shared functionality for cis_validation modules."
+authors = [
+    {name="", email=""}
+]
+requires-python = ">=3.8"
+
+[tool.pdm.dev-dependencies]
+test = [
+"pytest"
+]
+
+[build-system]
+requires = ["pdm-pep517>=1.0"]
+build-backend = "pdm.pep517.api"
+
+[tool.pytest.ini_options]
+markers = [
+]
+addopts = [
+    # Unknown markers are disallowed. Add them to the 'markers' section above.
+    "--strict-markers",
+]
+
+[tool.pylint.reports]
+score = false
+
+[tool.pylint.format]
+max-line-length = 108
+
+[tool.pylint.basic]
+good-names = [
+    "i",
+]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 108
+
+[tool.ruff]
+line-length = 108
